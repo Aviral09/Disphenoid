@@ -1,30 +1,22 @@
 <script>
-	export let name;
+	import Bar from "./components/bar.svelte";
+	import Player from "./components/player.svelte";
+	import Stream from "./components/videostream.svelte";
+
+	import { search } from "./core/api";
+
+	const videos = 2;
+
+	const searcher = (e) => {
+		console.log("hi");
+		// console.log(e.target.childNodes[0].value);
+		// if (srch) search(srch).then((r) => console.log(r));
+	};
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
-
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
 </style>
+
+<Bar {searcher} />
+<!-- <Player id="wieRZoJSVtw" /> -->
+<Stream />

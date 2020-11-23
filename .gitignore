@@ -1,6 +1,8 @@
 /node_modules/
 /public/build/
 
+api.js
+
 *lock*.yaml
 *lock*.yml
 
