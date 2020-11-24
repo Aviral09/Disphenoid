@@ -16,21 +16,25 @@
     })();
 </script>
 
-<style>
-    #main {
+<style type="text/scss">
+    #wrapper {
         width: 100%;
         height: 99.75vh;
-        border: 0;
-        background: #111;
+        .main {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background: #111;
+        }
     }
 </style>
 
-<div>
+<div id="wrapper">
     <iframe
         id="main"
+        class="main"
         title="video"
-        modestbranding="1"
         src="https://www.youtube-nocookie.com/embed/{id}"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allow="accelerometer;clipboard-write;encrypted-media;picture-in-picture"
         allowfullscreen />
 </div>

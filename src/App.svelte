@@ -4,13 +4,19 @@
 	import Stream from "./components/videostream.svelte";
 
 	import { search } from "./core/api";
+	import videos from "./components/sample.json";
 
-	const videos = 2;
+	let base = videos;
+	let id = "wieRZoJSVtw";
 
 	const searcher = (e) => {
-		console.log("hi");
-		// console.log(e.target.childNodes[0].value);
-		// if (srch) search(srch).then((r) => console.log(r));
+		search(e.target.childNodes[0].value).then((r) => (base = r));
+		window.location.href = "#search";
+	};
+	const vidoer = (e) => {
+		id = e.target.parentElement.id;
+		window.location.href = "#main";
+		document.getElementById("main").focus();
 	};
 </script>
 
@@ -18,5 +24,5 @@
 </style>
 
 <Bar {searcher} />
-<!-- <Player id="wieRZoJSVtw" /> -->
-<Stream />
+<Player {id} />
+<Stream videos={base} {vidoer} />

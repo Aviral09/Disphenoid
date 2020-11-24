@@ -1,8 +1,13 @@
 <script>
-    import videos from "./sample.json";
+    export let videos, vidoer;
 </script>
 
 <style type="text/scss">
+    section {
+        padding: 50px 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
     .recom {
         display: flex;
         flex-direction: column;
@@ -26,14 +31,15 @@
     }
 </style>
 
-<section style="padding:10px;display:flex;flex-wrap:wrap;">
+<section id="search">
     {#each videos.items as vid}
-        <div class="recom">
+        <div class="recom" on:click={vidoer} id={vid.id.videoId}>
             <img src={vid.snippet.thumbnails.medium.url} alt="" />
             <div class="name">
                 {@html vid.snippet.title.slice(0, 60)}{vid.snippet.title.length > 20 ? '...' : ''}
             </div>
             <div class="channel">{vid.snippet.channelTitle}</div>
+            <div class="channel">{vid.snippet.publishedAt}</div>
         </div>
     {/each}
 </section>

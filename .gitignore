@@ -3,7 +3,10 @@
 
 api.js
 
+**/*.map
+
 *lock*.yaml
 *lock*.yml
 
 .DS_Store
+**/.DS_Store

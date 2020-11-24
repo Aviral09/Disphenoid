@@ -1,5 +1,6 @@
 <script>
-    let bar, searcher;
+    export let searcher;
+    let bar;
 
     setInterval(() => {
         bar.style.opacity = document.activeElement.id === "srcBox" ? "1" : "0";
@@ -39,7 +40,6 @@
     <span>
         <svg
             width="32"
-            height="auto"
             viewBox="0 0 1024 721"
             style="position:relative;top:5px;">
             <path d="M407 493l276-143L407 206V493z" fill="#FFF" />
