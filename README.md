@@ -2,10 +2,6 @@
 
 ![version](https://img.shields.io/badge/version-1.0.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## About
-Are you sick of youtube always tracking and constantly analysing your data? Have your recommendations become too private? Do you often get the feeling "Whoa! How did they come to know I was thinking about this"?
-Disphenoid is the solution to all your problems! A tracker free youtube  
-
 ## Table of Contents
 - [Quick Start :boom:](#quick-start)
 - [Documentation 🧾](#documentation)
